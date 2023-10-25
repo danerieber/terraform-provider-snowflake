@@ -96,6 +96,7 @@ type DatabaseRoleGrantPrivileges struct {
 	DatabasePrivileges     []AccountObjectPrivilege `ddl:"-"`
 	SchemaPrivileges       []SchemaPrivilege        `ddl:"-"`
 	SchemaObjectPrivileges []SchemaObjectPrivilege  `ddl:"-"`
+	AllPrivileges          *bool                    `ddl:"keyword" sql:"ALL PRIVILEGES"`
 }
 
 type DatabaseRoleGrantOn struct {

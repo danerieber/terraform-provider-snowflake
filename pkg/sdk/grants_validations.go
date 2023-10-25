@@ -140,8 +140,8 @@ func (opts *GrantPrivilegesToDatabaseRoleOptions) validate() error {
 }
 
 func (v *DatabaseRoleGrantPrivileges) validate() error {
-	if !exactlyOneValueSet(v.DatabasePrivileges, v.SchemaPrivileges, v.SchemaObjectPrivileges) {
-		return fmt.Errorf("exactly one of DatabasePrivileges, SchemaPrivileges, or SchemaObjectPrivileges must be set")
+	if !exactlyOneValueSet(v.DatabasePrivileges, v.SchemaPrivileges, v.SchemaObjectPrivileges, v.AllPrivileges) {
+		return fmt.Errorf("exactly one of DatabasePrivileges, SchemaPrivileges, SchemaObjectPrivileges, or AllPrivileges must be set")
 	}
 	if valueSet(v.DatabasePrivileges) {
 		allowedPrivileges := []AccountObjectPrivilege{
