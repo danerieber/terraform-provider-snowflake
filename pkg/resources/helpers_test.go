@@ -228,6 +228,15 @@ func roleGrants(t *testing.T, id string, params map[string]interface{}) *schema.
 	return d
 }
 
+func databaseRoleGrants(t *testing.T, id string, params map[string]interface{}) *schema.ResourceData {
+	t.Helper()
+	r := require.New(t)
+	d := schema.TestResourceDataRaw(t, resources.DatabaseRoleGrants().Schema, params)
+	r.NotNil(d)
+	d.SetId(id)
+	return d
+}
+
 func userOwnershipGrant(t *testing.T, id string, params map[string]interface{}) *schema.ResourceData {
 	t.Helper()
 	r := require.New(t)
