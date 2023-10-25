@@ -607,8 +607,8 @@ type AccountParameter string
 // Account Parameters include Session Parameters, Object Parameters and User Parameters
 const (
 	// Account Parameters
-	AccountParameterAllowClientMFACaching                        AccountParameter = "ALLOW_CLIENT_MFA_CACHING"
-	AccountParameterAllowIDToken                                 AccountParameter = "ALLOW_ID_TOKEN" // #nosec G101
+	AccountParameterAllowClientMFACaching                        AccountParameter = "ALLOW_CLIENT_MFA_CACHING" // #nosec G101
+	AccountParameterAllowIDToken                                 AccountParameter = "ALLOW_ID_TOKEN"           // #nosec G101
 	AccountParameterClientEncryptionKeySize                      AccountParameter = "CLIENT_ENCRYPTION_KEY_SIZE"
 	AccountParameterEnableInternalStagesPrivatelink              AccountParameter = "ENABLE_INTERNAL_STAGES_PRIVATELINK"
 	AccountParameterEventTable                                   AccountParameter = "EVENT_TABLE"
